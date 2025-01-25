@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %} Create Event {% endblock %}
+
+{% block content %}
+
+<p>Welcome to create event page </p>
+
+<form method="POST" >
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.title.label }}
+        {{ form.title }}
+    </div>
+    <div>
+        {{ form.description.label }}
+        {{ form.description }}
+    </div>
+    <div>
+        {{ form.submit()}}
+    </div>
+</form>
+
+{% endblock %}
+
