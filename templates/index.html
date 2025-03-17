@@ -4,20 +4,24 @@
 
 {% block content %}
 <h2>Upcoming Events</h2>
-{% for event in events %}
-    <div class="event">
-        <h3>
-            {{ event.title}}
-        </h3>
-    </div>
-
-{% else %}
-<p>No events are scheduled.</p>
-
-{% endfor %}
-<div id="events">
-
-</div>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Event Name</th>
+            <th>Date</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for event in events %}
+        <tr>
+            <td><a href="{{url_for('event_detail', event_id=event.id)}}">{{ event.title }}</a></td>
+            <td>{{ event.date.strftime('%Y-%m-%d') }}</td>
+            <td>{{ event.location }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{{ url_for('create_event') }}" class="btn btn-primary">Create Event</a>
 
 {% endblock %}
-

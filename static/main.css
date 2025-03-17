@@ -1,4 +1,14 @@
-/* General styles */
+/* General Styles */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -9,15 +19,43 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: rgb(184, 11, 11);
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
 }
 
 header h1 {
     margin: 0;
 }
+
+header a {
+    color: #fff;
+    text-decoration: none
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.auth-buttons a {
+    margin-right: 10px;
+}
+
 
 main {
     padding: 20px;
@@ -26,7 +64,7 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgb(184, 11, 11);
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -41,12 +79,7 @@ footer p {
 
 /* Placeholder for more specific styles (you'll add styles for your content here) */
 /* Example for a form within main */
-main form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 
 main form label {
     display: block;
@@ -56,6 +89,7 @@ main form label {
 main form input[type="text"],
 main form input[type="email"],
 main form input[type="date"],
+main form input[type="password"],
 main form textarea {
     width: 95%;
     padding: 10px;
@@ -74,7 +108,7 @@ main form button {
 }
 
 /* Example for a table within main */
-main table {
+/* main table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
@@ -90,4 +124,4 @@ main td {
 main th {
   background-color: #f0f0f0;
   font-weight: bold;
-}
+} */ 
